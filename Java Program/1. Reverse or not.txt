@@ -1,0 +1,27 @@
+1.	Check Two String which are reverse of each other or not
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter your first string");
+	String str1=sc.nextLine();
+	System.out.println("Reverse of string");
+	String str2="";
+	for(int i=str1.length()-1;i>=0;i--){
+	    str2=str2+str1.charAt(i);
+	}
+	System.out.println(str2);
+	//for ignoring case:
+	str1=str1.toLowerCase();
+	str2=str2.toLowerCase();
+	    
+	if(str1.equals(str2)){
+	    System.out.println("String are reverse of each other");
+	}
+	else{
+	  System.out.println("String are not reverse of each other");  
+	}
+	}
+}
+

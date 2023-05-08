@@ -1,0 +1,57 @@
+Find the Smallest Sum of consecutive Number from given Array.
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the number of element");
+	int n=sc.nextInt();
+	int arr[]=new int[n];
+	System.out.println("Enter the element of arrays");
+	for(int i=0;i<n;i++){
+	    arr[i]=sc.nextInt();
+	}
+int maxSum=Integer.MAX_VALUE;
+	for(int i=0;i<n;i++){
+	    int sum=0;
+	    for(int j=i;j<n;j++){
+	       sum=sum+arr[j];
+	        if(sum<maxSum){
+	            maxSum=sum;
+	        }
+	    }
+	  
+	}
+	 System.out.println(maxSum); 
+	}
+}  
+Time complexity: 0(n^2)
+                                             OR
+From Kadane’s Algorithm
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the number of element");
+	int n=sc.nextInt();
+	int arr[]=new int[n];
+	System.out.println("Enter the element of arrays");
+	for(int i=0;i<n;i++){
+	    arr[i]=sc.nextInt();
+	}
+int maxSum=Integer.MAX_VALUE;
+int curSum=0;
+	for(int i=0;i<n;i++){
+	    curSum=curSum+arr[i];
+	        if(curSum<maxSum){
+	            maxSum=curSum;
+	        }
+	        if(curSum>0){
+	        curSum=0;
+	    
+	    }
+	}  
+	 System.out.println(maxSum); 
+	}
+}

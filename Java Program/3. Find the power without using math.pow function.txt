@@ -1,0 +1,29 @@
+Find the Power without using math.pow function.
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the number");
+	int x=sc.nextInt();
+	System.out.println("Enter the power");
+	int n=sc.nextInt();
+	double ans=1;
+       double ans1=1;
+       int n1=n;
+       if(n<0){
+           n=n*(-1);
+       }
+	for(int i=1;i<=n;i++){
+	   ans=ans*x;
+    }
+    if(n1>0){
+        ans1=ans;
+    }
+    else{
+ans1=(1/ans);
+    }
+    System.out.println(ans1);
+	}
+}
+	0(n)
