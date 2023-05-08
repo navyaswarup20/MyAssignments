@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	boolean ans=false;
+	int ansDigit=0;
+	int i=0;
+	System.out.println("Enter String");
+	String str=sc.nextLine();
+	int c=0;
+	if(str.charAt(0)=='-'){
+	    ans=true;
+	    i=1;
+	}
+	while(i<str.length()){
+	    if(str.charAt(i)<= '0' || str.charAt(i)<='9'){
+	        ansDigit=ansDigit*10+(str.charAt(i)-'0');
+	    i++;
+	    c=1;
+	    }
+	    else{
+	        System.out.println("Given string also contain alphabet");
+	        c=0;
+	        break;
+	        
+	    }
+	}
+	
+	if(ans){
+	    ansDigit=ansDigit*-1;
+	}
+	if(c==1){
+ System.out.println("Integer "+ ansDigit);
+	}
+	}
+}
