@@ -1,0 +1,21 @@
+/*Write an application that accepts two numbers, divides the first number with the second 
+number and display the result. Hint: You need to handle ArithmeticException which is 
+thrown when there is an attempt to divide a number by zero. */
+import java.util.*;
+public class ExceptionHandling1{
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter first number");
+		int num1=sc.nextInt();
+		System.out.println("Enter second number");
+		int num2=sc.nextInt();
+		int ans=0;
+		try {
+		ans=num1/num2;
+		System.out.println("After divison answer is : "+ans);
+		}
+		catch(ArithmeticException e) {
+			System.out.println("Error: It should not be divided by 0");
+		}
+	}
+}
