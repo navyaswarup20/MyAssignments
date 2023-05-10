@@ -1,0 +1,33 @@
+/*24. Printing Odd and Even no. from the array..*/
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class PrintOddEven{
+	public static void main(String args[]) {
+		ArrayList<Integer> even = new ArrayList<Integer>();
+		ArrayList<Integer> odd= new ArrayList<Integer>();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the count of number");
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		System.out.println("Enter the numbers:");
+		for(int i=0;i<n;i++) {
+			arr[i]=sc.nextInt();
+			if(arr[i]%2==0) {
+				even.add(arr[i]);
+			}
+			else {
+				odd.add(arr[i]);
+			}
+		}
+	for(Integer e:even) {
+		System.out.print("Even Number: ");
+		System.out.print(e+" ");
+	}
+	System.out.println();
+	System.out.print("Odd Number: ");
+	for(Integer o:odd) {
+		System.out.print(o+" ");
+	}
+	}
+}

@@ -1,0 +1,23 @@
+/*Write a program that reads a set of integers, and then prints the sum of the even and odd 
+integers.*/
+import java.util.Scanner;
+public class OddEvenSum{
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		int odd=0,even=0;
+		System.out.println("Enter the count of number");
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		System.out.println("Enter the numbers:");
+		for(int i=0;i<n;i++) {
+			arr[i]=sc.nextInt();
+			if(arr[i]%2==0) {
+				even=even+arr[i];
+			}
+			else {
+				odd=odd+arr[i];
+			}
+		}
+		System.out.println("Even: "+even+" Odd: "+odd);
+	}
+}

@@ -1,0 +1,30 @@
+/*21. Printing only not-repeated digits in the array.*/
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+public class LargestSmallestNumber{
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the count of number");
+		int n=sc.nextInt();
+		System.out.println("Enter the number");
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++) {
+			arr[i]=sc.nextInt();
+		}
+		HashMap<Integer,Integer> hm=new HashMap<>();
+		for(int i:arr) {
+			if(hm.containsKey(i)) {
+				hm.put(i,hm.get(i)+1);
+			}
+			else {
+				hm.put(i,1);
+			}
+		}
+		for(Map.Entry<Integer,Integer> entry: hm.entrySet()) {
+			if(entry.getValue()==1) {
+				System.out.print(entry.getKey()+" ");
+			}
+		}
+	}
+}
